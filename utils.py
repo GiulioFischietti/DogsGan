@@ -401,28 +401,29 @@ def add_sample_parser(parser):
   return parser
 
 # Convenience dicts
-dset_dict = {'I32': dset.ImageFolder, 'I64': dset.ImageFolder, 
+dset_dict = {'dogs_hdf5': dset.StandfordDogs, 'dogs': dset.StandfordDogs, 
+            'I32': dset.ImageFolder, 'I64': dset.ImageFolder, 
              'I128': dset.ImageFolder, 'I256': dset.ImageFolder,
              'I32_hdf5': dset.ILSVRC_HDF5, 'I64_hdf5': dset.ILSVRC_HDF5, 
              'I128_hdf5': dset.ILSVRC_HDF5, 'I256_hdf5': dset.ILSVRC_HDF5,
              'C10': dset.CIFAR10, 'C100': dset.CIFAR100}
-imsize_dict = {'I32': 32, 'I32_hdf5': 32,
+imsize_dict = {'dogs_hdf5':64, 'dogs':64, 'I32': 32, 'I32_hdf5': 32,
                'I64': 64, 'I64_hdf5': 64,
                'I128': 128, 'I128_hdf5': 128,
                'I256': 256, 'I256_hdf5': 256,
                'C10': 32, 'C100': 32}
-root_dict = {'I32': 'ImageNet', 'I32_hdf5': 'ILSVRC32.hdf5',
+root_dict = {'dogs_hdf5': '', 'dogs': '', 'I32': 'ImageNet', 'I32_hdf5': 'ILSVRC32.hdf5',
              'I64': 'ImageNet', 'I64_hdf5': 'ILSVRC64.hdf5',
              'I128': 'ImageNet', 'I128_hdf5': 'ILSVRC128.hdf5',
              'I256': 'ImageNet', 'I256_hdf5': 'ILSVRC256.hdf5',
              'C10': 'cifar', 'C100': 'cifar'}
-nclass_dict = {'I32': 1000, 'I32_hdf5': 1000,
+nclass_dict = {'dogs_hdf5': 120,'dogs': 120, 'I32': 1000, 'I32_hdf5': 1000,
                'I64': 1000, 'I64_hdf5': 1000,
                'I128': 1000, 'I128_hdf5': 1000,
                'I256': 1000, 'I256_hdf5': 1000,
                'C10': 10, 'C100': 100}
 # Number of classes to put per sample sheet               
-classes_per_sheet_dict = {'I32': 50, 'I32_hdf5': 50,
+classes_per_sheet_dict = {'dogs_hdf5':50, 'dogs':50, 'I32': 50, 'I32_hdf5': 50,
                           'I64': 50, 'I64_hdf5': 50,
                           'I128': 20, 'I128_hdf5': 20,
                           'I256': 20, 'I256_hdf5': 20,
