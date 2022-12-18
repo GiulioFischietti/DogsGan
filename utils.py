@@ -401,7 +401,7 @@ def add_sample_parser(parser):
   return parser
 
 # Convenience dicts
-dset_dict = {'dogs_hdf5': dset.StandfordDogs, 'dogs': dset.StandfordDogs, 
+dset_dict = {'dogs_hdf5': dset.StandfordDogs_HDF5, 'dogs': dset.StandfordDogs, 
             'I32': dset.ImageFolder, 'I64': dset.ImageFolder, 
              'I128': dset.ImageFolder, 'I256': dset.ImageFolder,
              'I32_hdf5': dset.ILSVRC_HDF5, 'I64_hdf5': dset.ILSVRC_HDF5, 
